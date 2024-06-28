@@ -27,32 +27,31 @@ body:before {
 .封面容器 {
     height: calc(100dvh - 50px);
 }
-.博主头像 {
-    height: 20dvmin;
-    width: 20dvmin;
-    left: 50%;
-    top: 30dvh;
-    transform: translate(-50%, -50%);
-    min-width: 200px;
-    min-height: 200px;
-    position: absolute;
-    border-radius: 9999999px;
-    border: 5px whitesmoke solid;
-    box-shadow: 0 0 128px #fff;
-}
 .魔芋爽 {
     height: calc(100dvh - 25px);
 }
 .魔芋爽 .好吃吗 {
-    height: calc(80% - 50px);
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    width: max-content;
+    transform: translate(-50%);
+    height: max-content;
+}
+.博主头像 {
+    height: 20dvmin;
+    width: 20dvmin;
+    margin-top: 15dvh;
+    min-width: 200px;
+    min-height: 200px;
+    border-radius: 9999999px;
+    border: 5px whitesmoke solid;
+    box-shadow: 0 0 128px #fff;
 }
 .彩虹字体 {
     color: white;
     font-size: 3em;
-    position: absolute;
-    top: calc(60% - 2.5em);
-    left: 50%;
-    transform: translate(-50%);
+    margin-top: 3dvh;
     background-image: -webkit-linear-gradient(left, red, orange, yellow, green, aquamarine, deepskyblue, blue, violet, red);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -60,11 +59,9 @@ body:before {
     -webkit-animation: 彩虹 8s infinite linear;
 }
 .封面下拉提示 {
-    top: 60%;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-top: 4dvh;
     color: white;
-    position: absolute;
+    position: relative;
 }
 @keyframes 彩虹 {
     from { background-position: 0 0; }
