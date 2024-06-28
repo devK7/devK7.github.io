@@ -1,0 +1,1 @@
+$(async function(){封面动画()});

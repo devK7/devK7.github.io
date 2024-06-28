@@ -1,0 +1,72 @@
+body:before {
+    width: 100dvw;
+    height: 100dvh;
+    content: "";
+    position: fixed;
+    z-index: -1;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: url(/resource/bg/img/富士山.jpg);
+    -webkit-background-size: cover !important;
+    -moz-background-size: cover !important;
+    -o-background-size: cover;
+    background-size: cover !important;
+    background-attachment: fixed;
+    background-position: center center;
+    overflow: hidden;
+    -webkit-overflow-scrolling: touch;
+}
+.page {
+    background-image: linear-gradient(to bottom, #0000 50%, #f5f5f58a, #f5f5f58a 100%) !important;
+    background-size: cover;
+    position: relative;
+    backdrop-filter: blur(8px);
+}
+.封面容器 {
+    height: calc(100dvh - 50px);
+}
+.博主头像 {
+    height: 20dvmin;
+    width: 20dvmin;
+    left: 50%;
+    top: 30dvh;
+    transform: translate(-50%, -50%);
+    min-width: 200px;
+    min-height: 200px;
+    position: absolute;
+    border-radius: 9999999px;
+    border: 5px whitesmoke solid;
+    box-shadow: 0 0 128px #fff;
+}
+.魔芋爽 {
+    height: calc(100dvh - 25px);
+}
+.魔芋爽 .好吃吗 {
+    height: calc(80% - 50px);
+}
+.彩虹字体 {
+    color: white;
+    font-size: 3em;
+    position: absolute;
+    top: calc(60% - 2.5em);
+    left: 50%;
+    transform: translate(-50%);
+    background-image: -webkit-linear-gradient(left, red, orange, yellow, green, aquamarine, deepskyblue, blue, violet, red);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation: 彩虹 8s infinite linear;
+}
+.封面下拉提示 {
+    top: 60%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    position: absolute;
+}
+@keyframes 彩虹 {
+    from { background-position: 0 0; }
+    to { background-position: 200% 0; }
+}

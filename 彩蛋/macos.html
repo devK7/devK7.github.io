@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0">
+		<title></title>
+		<style>
+			html, body {
+    			margin: 0;
+    			padding: 0;
+    			background-color: black;
+			}
+			.container {
+				--load-time: 5s;
+				position: absolute;
+  				top: 50%;
+	  			left: 50%;
+  				transform: translate(-50%, -50%);
+    			text-align: center;
+			}
+			.progress-bar {
+    			width: 256px;
+    			height: 8px;
+    			background-color: #555;
+    			border-radius: 5px;
+    			overflow: hidden;
+				animation: load-out .175s linear forwards;
+				animation-delay: var(--load-time);
+			}
+			.progress {
+	    		width: 0%;
+    			height: 100%;
+    			background-color: azure;
+    			animation: progress var(--load-time) linear forwards;
+			}
+			@keyframes progress {
+    			0% { width: 0%; }
+    			15% { width: 25%; }
+	    		85% { width: 65%; }
+    			100% { width: 100%; }
+			}
+			@keyframes load-out {
+    			from { opacity: 1; }
+    			to { opacity: 0; }
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<img src="/favicon.svg" width="128px" style="margin-bottom:48px;animation:load-out .175s linear forwards;animation-delay:var(--load-time);">
+			<div class="progress-bar">
+				<div class="progress"></div>
+			</div>
+		</div>
+	</body>
+</html>

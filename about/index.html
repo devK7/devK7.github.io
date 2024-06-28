@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" type="image/svg" href="/favicon.svg">
+        <script type="text/javascript" src="/js/global/global.js"></script>
+        <title></title>
+    </head>
+    <body style="background-color:lavender;">
+        <nav class="title-bar"></nav>
+        <div class="page">
+            <div class="封面容器" onload="(async function() { await 封面动画(); })">
+                <div class="魔芋爽">
+                    <div class="好吃吗">
+                        <img src="/resource/blogger/blogger.jpeg" class="博主头像">
+                        <h1 class="彩虹字体">devK7の博客</h1>
+                        <h1 class="封面下拉提示">下拉查看</h1>
+                    </div>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20%" height="20%" fill="white" viewBox="0 0 16 16" style="position:absolute;top:75%;left:40%;">
+                        <path fill-rule="evenodd" d="M1.553 6.776a.5.5 0 0 1 .67-.223L8 9.44l5.776-2.888a.5.5 0 1 1 .448.894l-6 3a.5.5 0 0 1-.448 0l-6-3a.5.5 0 0 1-.223-.67"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="box">
+                <h1 style="margin-top:0;"><img src="/favicon.svg" height="35" style="position: relative;top:6px;">&nbsp;关于我们</h1>
+                <p>欢迎来到 K7のBlog! 我们是一支充满激情的开发团队，致力于为您提供最新、最有趣的博客内容。YFB成立于2024年，由一群热爱技术、文学和艺术的年轻人组成。我们相信互联网和数字媒体的力量，可以连接世界各地的人，让彼此之间的信息交流更加便捷。</p>
+                <p>devK7 是我们的开发者团队，专注于创建出色的用户体验。我们深知技术的快速发展，因此我们不断学习和采用最新的技术，以确保您在我们的博客上拥有顶尖的浏览体验。我们的团队成员具有多年的开发经验，擅长前端和后端技术，努力为您打造一个富有创意和交互性的博客平台。</p>
+                <p>无论您是新手还是经验丰富的博主，我们都欢迎您加入我们的社区。在这里，您可以分享您的独特见解、经验和创意，与全球的博客爱好者互动。我们相信分享知识可以推动社会进步，因此我们鼓励多样性、包容性和创新。在K7のBlog，每个声音都是重要的。</p>
+                <p>我们的博客涵盖多个领域，包括科技、文学、艺术、生活方式等。无论您对哪个领域感兴趣，我们都有内容适合您。我们的目标是为您提供有趣、启发和实用的信息，让您在博客中找到属于自己的未来。</p>
+                <p>在K7のBlog，我们鼓励创造力和探索精神。如果您有任何建议、意见或合作想法，请随时与我们联系。我们希望与您共同建立一个充满活力的博客社区，为未来的博客体验定义新标准。</p>
+                <b>Copyright &copy; 2024 K7のBlog All Right Reserved.</b>
+            </div>
+            <div class="box">
+                <h1 style="margin-top:0;" align="center">Hot!!! 投稿招募</h1>
+                <h3>投稿邮箱: k7dev@outlook.com</h3>
+                <b>格式:</b>
+                <p>&emsp;&emsp;标题: string = 标题</p>
+                <p>&emsp;&emsp;小标题: string? = 小标题</p>
+                <p>&emsp;&emsp;作者昵称: string = 亲爱的昵称</p>
+                <p>&emsp;&emsp;标签(大于2个): string[] = [xxx, xxx, ...]</p>
+                <p>&emsp;&emsp;转载权限: bool = true/false</p>
+                <p>&emsp;&emsp;正文: string = 建议用web三板斧, 用word格式(里面的字体会直接影响网页上的字体，自定义字体需要打包zip添加到附件)，文件名为"文章标题.docx"，也可以是txt但是不推荐</p>
+                <p>&emsp;&emsp;备注: string = 备注</p>
+                <p>如果过审了，会收到邮件回复，确定格式。如果确认无误请回复“我已确认无误，可以发布文章《xxx》。”</p>
+                <p>如果审核失败，请按照提示重新修改</p>
+                <p>如果你想和我探讨斟酌语句，可以邮件告诉我。</p>
+                <h2 style="color:red;">如果是转载他人的文章，请标明来源!!!</h2>
+            </div>
+        </div>
+        <nav class="footer"></nav>
+    </body>
+</html>

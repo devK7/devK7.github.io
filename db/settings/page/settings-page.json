@@ -1,0 +1,72 @@
+[
+    {
+        "display_name": "主页",
+        "name": "mainpage",
+        "ui": [
+            {"text": "<h4 style=\"color:#ff8080;\">警告: 此处的设置只是一个UI，相当于摆设，无论存不存都会在下次访问时重置</h4>"}
+        ]
+    },
+    {
+        "display_name": "通用",
+        "name": "general",
+        "ui": [
+            {"text": "<h3>一般</h3>"},
+            {"switch_btn": "开关"}
+        ]
+    },
+    {
+        "display_name": "网络",
+        "name": "network",
+        "ui": [
+            {"text": "<h3>网络检测</h3>"},
+            {"text": "<a href=\"javascript:void(0);\" onclick=\"alert('测试成功')\" style=\"color:deepskyblue;\">&emsp;ping测试</a>"}
+        ]
+    },
+    {
+        "display_name": "个性化",
+        "name": "personalization",
+        "ui": [
+            {"text": "<h3>深色设置</h3>"},
+            {"switch_btn": "深色开关"}
+        ]
+    },
+    {
+        "display_name": "账户",
+        "name": "account",
+        "ui": [
+            {"text": "<p>暂不开放</p>"}
+        ]
+    },    {
+        "display_name": "隐私与安全性",
+        "name": "privacy",
+        "ui": [
+            {"text": "<h3>数据分享设置</h3>"},
+            {"switch_btn": "共享数据"}
+        ]
+    },
+    {
+        "display_name": "个性化广告设置",
+        "name": "advertisement",
+        "ui": [
+            {"text": "<h3>个性化广告开关</h3>"},
+            {"switch_btn": "开启个性化广告"}
+        ]
+    },
+    {
+        "display_name": "COOKIE设置",
+        "name": "cookie",
+        "ui": [
+            {"text": "<h3>COOKIE全局开关</h3>"},
+            {"switch_btn": "启用COOKIE"},
+            {"text": "<h3>COOKIE全局设置</h3>"},
+            {"switch_btn": "使用COOKIE存储所有缓存数据"}
+        ]
+         
+    },    {
+        "display_name": "关于本站点",
+        "name": "about",
+        "ui": [
+            {"text": "<h2>此站点为devK7の小站，工作日勿扰。</h2>"}
+        ]
+    }
+]

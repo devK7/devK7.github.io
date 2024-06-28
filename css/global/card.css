@@ -1,0 +1,49 @@
+.card {
+    display: block;
+    max-width: 888px;
+    background-color: #FFFFFF88;
+    border-radius: 50px;
+    padding: 20px;
+    height: 300px;
+    overflow: hidden;
+    box-shadow: 0 0 25px rgba(0, 0, 0, .25);
+    margin: 20px auto;
+    box-sizing: border-box;
+    font-size: .4cm;
+    margin-top: 2.8vh;
+}
+.card img {
+    height: 100%;
+    aspect-ratio: 1 / 1;
+    border-radius: 40px;
+    object-fit: cover;
+    float: left;
+    margin-right: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+}
+h2, p {
+    margin: 0;
+    margin-bottom: 10px;
+}
+.card-text {
+    height: 100%;
+}
+.card-tag {
+    display: flex;
+    justify-items: stretch;
+}
+.card-tag dl {
+    color: whitesmoke;
+    background-color: grey;
+    border-radius: 6px;
+    margin: 0;
+    margin-right: 10px;
+    padding: 5px 10px;
+}
+
+@media screen and (max-width: 888px) {
+    .card {
+        max-width: calc(100vw - 40px);
+        max-height: calc((100vw - 40px) / 3);
+    }
+}

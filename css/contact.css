@@ -1,0 +1,40 @@
+.userpost {
+    max-width: 375px;
+}
+.userpost label {
+    font-size: 20px;
+}
+input[name="email"], textarea[name="msg"] {
+    width: 100%;
+    border-radius: 16px;
+    padding: 8px 16px;
+    -webkit-appearance: none;
+    box-sizing: border-box;
+    font-size: 16px;
+    border: 2px #808080 solid;
+    max-width: 375px;
+}
+textarea[name="msg"] {
+    height: 100px;
+    resize: none;
+}
+input[name="email"]:focus, textarea[name="msg"]:focus,
+input[name="email"]:hover, textarea[name="msg"]:hover {
+    border: 2px deepskyblue solid;
+}
+input[type="submit"] {
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    margin-top: 20px;
+    padding: 8px 24px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 999999px;
+}
+input[type="submit"]:hover {
+    background-color: #0051a4;
+}
