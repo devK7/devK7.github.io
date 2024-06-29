@@ -7,15 +7,47 @@ body {
     margin: 24px;
     margin-top: 75px;
     border-radius: 24px;
-    display: flex;
-    flex-direction: row;
     height: calc(100dvh - 75px - 25px);
     position: fixed;
     width: calc(100dvw - 25px * 2);
+    overflow: hidden;
+}
+.left-menu {
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    left: 0;
+    padding: 16px;
+    overflow-x: hidden;
 }
 .nav-left {
-    display: flex;
-    flex-direction: row;
+    height: calc(100dvh - 75px - 25px);;
+    float: left;
+    position: relative;
+}
+.resize-bar {
+    width: 300px;
+    height: inherit;
+    resize: horizontal !important;
+    cursor: ew-resize;
+    cursor: col-resize;
+    opacity: 0;
+    overflow: scroll;
+}
+/* 拖拽线 */
+.resize-line {
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    border-right: 5px cornflowerblue solid;
+    pointer-events: none;
+    overflow: hidden;
+}
+.resize-bar::-webkit-scrollbar {
+    width: 300px;
+    height: inherit;
+    cursor: ew-resize;
+    cursor: col-resize;
 }
 .nav-title {
     text-align: center;
@@ -34,14 +66,20 @@ body {
     top: 3px;
 }
 .navigation-bar {
-    width: 300px;
+    height: calc(100% - 32px);
+    width: 100%;
     max-width: calc(100dvw - 48px);
     box-sizing: border-box;
     padding: 24px 48px;
     gap: 8px;
     display: flex;
     flex-direction: column;
-    overflow: auto;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    bottom: 0;
+    left: 0;
+    overflow-x: hidden;
 }
 .navigation-bar h1 p {
     text-overflow: ellipsis;
@@ -82,25 +120,12 @@ body {
 a[href="#cookie"] img, h2#cookie.nav-group-title img {
     border-radius: 99999999999px;
 }
-.resize-container {
-    height: 100%;
-    width: 8px;
-    cursor: ew-resize;
-    cursor: col-resize;
-}
-.resize-bar {
-    margin: 32px auto;
-    height: calc(100% - 32px * 2);
-    width: 4px;
-    background-color: #aaaaaa;
-}
 .container {
-    flex: 1;
+    height: 100%;
     padding: 20px;
     box-sizing: border-box;
     display: block;
-    overflow: auto;
-    width: max-content;
+    overflow: hidden;
 }
 .nav-group {
     margin-bottom: 20px;

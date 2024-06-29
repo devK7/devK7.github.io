@@ -47,6 +47,7 @@ var Navigation = {
     }
 }
 
+/*
 let resizing = false
 var old_mouse_x;
 const menu = document.querySelector('.menu-wrapper');
@@ -65,4 +66,4 @@ window.addEventListener('mousemove', (e) => {
         }
     }
 });
-window.addEventListener('mouseup', (e) => { resizing = false; });
+window.addEventListener('mouseup', (e) => { resizing = false; });*/
