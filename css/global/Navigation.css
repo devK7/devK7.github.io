@@ -40,7 +40,7 @@ body {
 .resize-line {
     position: absolute;
     right: 0; top: 0; bottom: 0;
-    border-right: 5px cornflowerblue solid;
+    border-right: 2px cornflowerblue solid;
     pointer-events: none;
     overflow: hidden;
 }
