@@ -4,6 +4,7 @@ body {
 .page[data-nav="true"] {
     background-color:#f0f8ffa0;
     backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
     margin: 24px;
     margin-top: 75px;
     border-radius: 24px;

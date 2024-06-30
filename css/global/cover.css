@@ -23,6 +23,7 @@ body:before {
     background-size: cover;
     position: relative;
     backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
 }
 .封面容器 {
     height: calc(100dvh - 50px);
