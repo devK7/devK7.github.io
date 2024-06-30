@@ -118,9 +118,6 @@ body {
     position: relative;
     top: 3px;
 }
-a[href="#cookie"] img, h2#cookie.nav-group-title img {
-    border-radius: 99999999999px;
-}
 .container {
     height: 100%;
     padding: 20px;
