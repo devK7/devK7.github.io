@@ -126,7 +126,10 @@ a[href="#cookie"] img, h2#cookie.nav-group-title img {
     padding: 20px;
     box-sizing: border-box;
     display: block;
-    overflow: hidden;
+    overflow: auto;
+}
+.container::-webkit-scrollbar {
+    display: none;
 }
 .nav-group {
     margin-bottom: 20px;
