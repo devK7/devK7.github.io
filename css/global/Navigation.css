@@ -168,3 +168,39 @@ a[href="#cookie"] img, h2#cookie.nav-group-title img {
 .button:hover {
     background-color: #0051a4;
 }
+
+@media screen and (max-width: 960px) {
+    .page[data-nav="true"] {
+        display: block;
+        overflow-y: auto;
+    }
+    .nav-left {
+        display: block;
+        position: relative;
+        height: auto;
+        box-sizing: border-box;
+        width: 100%;
+    }
+    .resize-bar, .resize-line {
+        display: none;
+    }
+    .left-menu {
+        position: relative;
+        height: auto;
+        width: 100%;
+        height: initial;
+        overflow: hidden;
+        padding: 0;
+    }
+    .navigation-bar {
+        position: relative;
+    }
+    .container {
+        display: block;
+        position: relative;
+        height: auto;
+    }
+    ::-webkit-scrollbar {
+        display: none;
+    }
+}
