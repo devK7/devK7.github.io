@@ -7,8 +7,9 @@ function get_post_data() {
         const p_meta = data["meta"]
         const p_view = new pv(p_meta["id"], p_meta["title"], p_meta["description"], p_meta["time"], p_meta["author"], p_meta["visitable"], p_meta["tags"]);
         $("#v_metadata").html(p_view.html);
+        $("title").html(p_meta["visitable"] ? p_meta["title"] : "错误: 权限不足");
+        if (!p_meta["visitable"]) throw "文章不可查看, 原因: 权限不足";
     });
-    if (!visitable) return;
     $.get(`/db/post/data/${view_id}.md`, function(data) {
         $("#v_content").html(marked.parse(data.toString()));
     });
