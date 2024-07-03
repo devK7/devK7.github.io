@@ -8,6 +8,11 @@ const docs_nav_arr = [
         display_name: "如何写出正确的废话",
         name: "如何写出正确的废话",
         ui: null
+    },
+    {
+        display_name: "电脑如何开关机",
+        name: "电脑如何开关机",
+        ui: null
     }
 ]
 $(async function() {
@@ -17,5 +22,8 @@ $(async function() {
     });
     $.get("/db/docs/写出正确的废话教程.md", async function(data) {
         $(".写出正确的废话教程").html(marked.parse(data));
+    });
+    $.get("/db/docs/电脑开关机教程.md", async function(data) {
+        $(".电脑开关机教程").html(marked.parse(data));
     });
 });
