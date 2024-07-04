@@ -18,6 +18,11 @@ const docs_nav_arr = [
         display_name: "如何下载软件",
         name: "如何下载软件",
         ui: null
+    },
+    {
+        display_name: "如何正确提问",
+        name: "如何正确提问",
+        ui: null
     }
 ]
 $(async function() {
@@ -33,5 +38,8 @@ $(async function() {
     });
     $.get("/db/docs/如何下载软件.md", async function(data) {
         $(".如何下载软件").html(marked.parse(data));
+    });
+    $.get("/db/docs/如何正确提问.md", async function(data) {
+        $(".如何正确提问").html(marked.parse(data));
     });
 });
