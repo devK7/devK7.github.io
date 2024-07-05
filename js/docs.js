@@ -23,6 +23,11 @@ const docs_nav_arr = [
         display_name: "如何正确提问",
         name: "如何正确提问",
         ui: null
+    },
+    {
+        display_name: "如何提交项目更改",
+        name: "如何提交项目更改",
+        ui: null
     }
 ]
 $(async function() {
@@ -41,5 +46,8 @@ $(async function() {
     });
     $.get("/db/docs/如何正确提问.md", async function(data) {
         $(".如何正确提问").html(marked.parse(data));
+    });
+    $.get("/db/docs/如何提交项目更改.md", async function(data) {
+        $(".如何提交项目更改").html(marked.parse(data));
     });
 });
