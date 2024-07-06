@@ -18,6 +18,7 @@ window.onload = async function(){
             "/css/global/switch.css",
             "/css/global/Navigation.css",
             "/css/global/cover.css",
+            "/css/global/rainbow.css",
             "https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900"
         ]
     };

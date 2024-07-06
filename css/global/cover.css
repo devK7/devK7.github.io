@@ -26,46 +26,92 @@ body:before {
     -webkit-backdrop-filter: blur(8px);
 }
 .封面容器 {
-    height: calc(100dvh - 50px);
-}
-.魔芋爽 {
-    height: calc(100dvh - 25px);
-}
-.魔芋爽 .好吃吗 {
-    text-align: center;
-    position: absolute;
-    left: 50%;
-    width: max-content;
-    transform: translate(-50%);
     height: max-content;
 }
-.博主头像 {
-    height: 20dvmin;
-    width: 20dvmin;
-    margin-top: 10dvh;
-    max-width: calc(70dvh - 50px);
-    max-height: calc(70dvh - 50px);
-    min-width: 200px;
-    min-height: 200px;
-    aspect-ratio: 1 / 1;
-    border-radius: 9999999px;
-    border: 5px whitesmoke solid;
-    box-shadow: 0 0 128px #fff;
+.魔芋爽 {
+    height: max-content;
+}
+.魔芋爽 .好吃吗 {
+    margin: 8px;
+    max-width: calc(100dvw - 16px);
+    text-align: center;
+    position: relative;
+    width: max-content;
+    height: max-content;
+    margin: auto;
+    margin-top: 4dvh;
 }
 .彩虹字体 {
+    display: inline-block;
     color: white;
-    font-size: 3em;
-    margin-top: 4dvh;
+    font-size: 4em;
     background-image: -webkit-linear-gradient(left, red, orange, yellow, green, aquamarine, deepskyblue, blue, violet, red);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
     -webkit-background-size: 200% 100%;
     -webkit-animation: 彩虹 8s infinite linear;
 }
-.封面下拉提示 {
-    margin-top: 8dvh;
-    color: white;
+@keyframes 旋转 {
+    from { transform: rotate(0deg) translate(-50%, -50%); }
+    to { transform: rotate(360deg) translate(-50%, -50%); }
+}
+.博主 {
+    max-width: calc(100dvw - 16px);
+    box-sizing: border-box;
+    margin: auto;
+    display: grid;
+    text-align: center;
+    align-items: center;
+    justify-content: space-between;
+    grid-gap: .4em;
+    grid-auto-flow: row;
+    grid-template-columns: 12em auto;
+}
+.博主头像 {
+    text-align: center;
+    display: block;
+    width: 10em;
+    aspect-ratio: 1/1;
+    margin: auto;
+    border-radius: 666em;
     position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.博主头像框 {
+    margin: auto;
+    position: relative;
+    width: 12em;
+    z-index: -1;
+    border-radius: 999999px;
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    display: block;
+}
+.博主头像框::before {
+    content: '';
+    position: absolute;
+    aspect-ratio: 1/1;
+    top: 50%;
+    left: 50%;
+    min-width: 150%;
+    min-height: 150%;
+    background-image: conic-gradient(hsl(0, 100%, 50%),
+            hsl(30, 100%, 50%),
+            hsl(60, 100%, 50%),
+            hsl(90, 100%, 50%),
+            hsl(120, 100%, 50%),
+            hsl(150, 100%, 50%),
+            hsl(180, 100%, 50%),
+            hsl(210, 100%, 50%),
+            hsl(240, 100%, 60%),
+            hsl(270, 100%, 50%),
+            hsl(300, 100%, 50%),
+            hsl(330, 100%, 50%),
+            hsl(360, 100%, 50%));
+    animation: 旋转 4s linear infinite;
+    transform-origin: 0% 0%;
+    transform: rotate(0deg) translate(-50%, -50%);
 }
 @keyframes 彩虹 {
     from { background-position: 0 0; }
