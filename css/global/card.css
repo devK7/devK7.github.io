@@ -54,7 +54,7 @@ h2, p {
     background: #e0e0e0;
     font-weight: 800;
 }
-@media screen and (max-width: 888px) {
+@media screen and (max-width: 424px) {
     .card {
         max-width: calc(100dvw - 40px);
         max-height: calc((100dvw - 40px) / 16 * 9);
