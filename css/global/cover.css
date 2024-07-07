@@ -44,7 +44,7 @@ body:before {
 .彩虹字体 {
     display: inline-block;
     color: white;
-    font-size: 4em;
+    font-size: 3em;
     background-image: -webkit-linear-gradient(left, red, orange, yellow, green, aquamarine, deepskyblue, blue, violet, red);
     -webkit-text-fill-color: transparent;
     -webkit-background-clip: text;
@@ -64,7 +64,7 @@ body:before {
     text-align: center;
     align-items: center;
     justify-content: space-between;
-    grid-gap: .5em;
+    /*grid-gap: .5em;*/
     grid-auto-flow: row;
     grid-template-columns: 10.8em auto;
     grid-auto-flow: dense;
@@ -111,7 +111,7 @@ body:before {
             hsl(300, 100%, 50%),
             hsl(330, 100%, 50%),
             hsl(360, 100%, 50%));
-    animation: 旋转 4s linear infinite;
+    animation: 旋转 10s linear infinite;
     transform-origin: 0% 0%;
     transform: rotate(0deg) translate(-50%, -50%);
 }
