@@ -1,3 +1,9 @@
+#v_metadata {
+    margin-top: 40px;
+}
+#v_metadata .card {
+    margin: 0 auto;
+}
 #v_content {
     max-width: 1660px;
     width: 92dvw;

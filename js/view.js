@@ -33,6 +33,6 @@ class pv {
         this.author = author;
         this.visitable = visitable;
         this.tags = tags;
-        this.html = `<div class="card" style="height:225px;max-width:666px;"><img src="/resource/post/avatar/${this.id.toString().padStart(8, "0")}.jpg" alt="${this.title}"><div class="card-text"><h2>${this.title}</h2><p><b>${this.description}</b></p><p style="color:grey">作者: ${this.author}</p><dl class="card-tag">${this.tags.map(tag => `<dl>${tag}</dl>`).join('')}</dl></div></div>`;
+        this.html = `<div class="card" style="height:225px;max-width:666px;"><img src="/resource/post/avatar/${this.id.toString().padStart(8, "0")}.jpg" alt="${this.title}"><div class="card-text"><h2>${this.title}</h2><p><b>${this.description}</b></p><p style="color:grey">作者: ${this.author}</p><dl class="card-tag">${this.tags.map(tag => `<dd>${tag}</dd>`).join('')}</dl></div></div>`;
     }
 }

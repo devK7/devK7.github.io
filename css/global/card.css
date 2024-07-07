@@ -4,7 +4,7 @@
     flex-direction: row;
     justify-content: center;
     background-color: #FFFFFF88;
-    border-radius: 8dvmin;
+    border-radius: 36px;
     overflow: hidden;
     box-shadow: 0 0 25px rgba(0, 0, 0, .25);
     box-sizing: border-box;
@@ -23,7 +23,7 @@
     width: auto;
     margin: auto 0 auto 20px;
     aspect-ratio: 1 / 1;
-    border-radius: 25%;
+    border-radius: 32px;
     object-fit: cover;
     box-shadow: 0 0 15px rgba(0, 0, 0, .25);
     justify-items: center;
@@ -41,16 +41,18 @@ h2, p {
     flex: auto;
 }
 .card-tag {
-    display: flex;
-    justify-items: stretch;
+    display: table-cell;
+    justify-items: center;
 }
-.card-tag dl {
-    color: whitesmoke;
-    background-color: grey;
+.card-tag dd {
+    display: inline-block;
+    color: #333;
     border-radius: 6px;
     margin: 0;
     margin-right: 10px;
     padding: 5px 10px;
+    background: #e0e0e0;
+    font-weight: 800;
 }
 @media screen and (max-width: 888px) {
     .card {
