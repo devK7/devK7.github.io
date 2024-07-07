@@ -50,6 +50,7 @@ body:before {
     -webkit-background-clip: text;
     -webkit-background-size: 200% 100%;
     -webkit-animation: 彩虹 8s infinite linear;
+    white-space: wrap;
 }
 @keyframes 旋转 {
     from { transform: rotate(0deg) translate(-50%, -50%); }
@@ -63,9 +64,10 @@ body:before {
     text-align: center;
     align-items: center;
     justify-content: space-between;
-    grid-gap: .4em;
+    grid-gap: .5em;
     grid-auto-flow: row;
-    grid-template-columns: 12em auto;
+    grid-template-columns: 10.8em auto;
+    grid-auto-flow: dense;
 }
 .博主头像 {
     text-align: center;
@@ -81,7 +83,7 @@ body:before {
 .博主头像框 {
     margin: auto;
     position: relative;
-    width: 12em;
+    width: 10.8em;
     z-index: -1;
     border-radius: 999999px;
     overflow: hidden;

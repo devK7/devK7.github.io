@@ -1,25 +1,27 @@
 .card {
-    display: block;
-    max-width: 888px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
     background-color: #FFFFFF88;
-    border-radius: 50px;
+    border-radius: 6dvmin;
     padding: 20px;
-    height: 300px;
     overflow: hidden;
     box-shadow: 0 0 25px rgba(0, 0, 0, .25);
-    margin: 20px auto;
     box-sizing: border-box;
     font-size: .4cm;
-    margin-top: 2.8vh;
+    gap: 8px;
+    aspect-ratio: 16 / 9;
+    align-items: center;
 }
 .card img {
     height: 100%;
     aspect-ratio: 1 / 1;
-    border-radius: 40px;
+    border-radius: 25%;
     object-fit: cover;
     float: left;
-    margin-right: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, .25);
+    justify-items: center;
+    text-align: center;
 }
 h2, p {
     margin: 0;
@@ -27,6 +29,7 @@ h2, p {
 }
 .card-text {
     height: 100%;
+    flex: auto;
 }
 .card-tag {
     display: flex;
