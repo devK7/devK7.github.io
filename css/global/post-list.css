@@ -1,10 +1,6 @@
 .post-list {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
     grid-gap: 32px;
-    justify-items: stretch;
     padding: 20px;
-    justify-content: start;
-    max-width: 100dvw;
-    box-sizing: border-box;
 }
