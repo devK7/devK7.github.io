@@ -67,7 +67,7 @@ async function load_post_list() {
     var xhr = new XMLHttpRequest();
     xhr.open("GET", "/db/post/list.json", true);
     xhr.onload = function(e) {
-        if (xhr.readyState === 4 && xhr.status === 200) JSON.parse(xhr.responseText).forEach(item => $(".post-list").prepend(`<a class="card" href="/view/${item["id"].toString().padStart(8, "0")}" target="_blank"><img src="/resource/post/avatar/${item["id"].toString().padStart(8, "0")}.jpg" alt="${item['title']}"><div class="card-text"><h2>${item['title']}</h2><p><b>${item["description"]}</b></p><dl class="card-tag"><dd>${new Date(item["time"]).toLocaleDateString('zh-CN')}</dd></div></dl></a>\n`));
+        if (xhr.readyState === 4 && xhr.status === 200) JSON.parse(xhr.responseText).forEach(item => $(".post-list").prepend(`<a class="card" href="/view/${item["id"].toString().padStart(8, "0")}" target="_blank"><img src="/resource/post/avatar/${item["id"].toString().padStart(8, "0")}.png" alt="${item['title']}"><div class="card-text"><h2>${item['title']}</h2><p><b>${item["description"]}</b></p><dl class="card-tag"><dd>${new Date(item["time"]).toLocaleDateString('zh-CN')}</dd></div></dl></a>\n`));
         if (Number(gets["only_list"])) $(".post-list").prepend(`<h1 align="center">文章列表</h1>`);
     };
     xhr.send();

@@ -1,0 +1,67 @@
+body::before {
+    background-image: linear-gradient(
+        135deg,
+        hsl(195deg 100% 50%) 0%,
+        hsl(199deg 100% 58%) 11%,
+        hsl(204deg 100% 64%) 22%,
+        hsl(210deg 100% 70%) 33%,
+        hsl(218deg 100% 75%) 44%,
+        hsl(232deg 100% 80%) 56%,
+        hsl(251deg 100% 81%) 67%,
+        hsl(268deg 100% 79%) 78%,
+        hsl(283deg 93% 77%) 89%,
+        hsl(300deg 76% 72%) 100%
+    );
+}
+.page {
+    background-image: none !important;
+}
+.m_crush_title {
+    width: max-content;
+}
+.max_crush_logo {
+    text-align: center;
+    display: block;
+    width: 10em;
+    aspect-ratio: 1/1;
+    margin: auto;
+    border-radius: 666em;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.max_rainbow {
+    display: inline-block;
+    color: white;
+    font-size: 2.8em;
+    background-image: -webkit-linear-gradient(left,
+    hsl(240deg 100% 50%),
+    hsl(221deg 100% 50%),
+    hsl(213deg 100% 50%),
+    hsl(206deg 100% 50%),
+    hsl(200deg 100% 50%),
+    hsl(195deg 100% 50%),
+    hsl(203deg 100% 63%),
+    hsl(214deg 100% 73%),
+    hsl(239deg 100% 82%),
+    hsl(271deg 100% 79%),
+    hsl(300deg 76% 72%),
+    hsl(295deg 78% 69%),
+    hsl(290deg 81% 66%),
+    hsl(285deg 83% 63%),
+    hsl(281deg 86% 61%),
+    hsl(276deg 89% 58%),
+    hsl(271deg 91% 56%),
+    hsl(266deg 94% 54%),
+    hsl(259deg 97% 51%),
+    hsl(240deg 100% 50%));
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    -webkit-background-size: 200% 100%;
+    -webkit-animation: max_rainbow 8s infinite linear;
+    white-space: wrap;
+}
+@keyframes max_rainbow {
+    from { background-position: 0 0; }
+    to { background-position: 200% 0; }
+}
