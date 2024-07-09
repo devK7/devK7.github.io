@@ -16,6 +16,9 @@
     -webkit-appearance: none;
     overflow: auto;
 }
+.card::-webkit-scrollbar {
+    display: none;
+}
 .card img {
     /*去你妹的苹果，Safari中flex布局居然TMD不支持上下填充*/
     /*垃圾webkit*/
