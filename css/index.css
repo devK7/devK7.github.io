@@ -1,0 +1,35 @@
+.dialog {
+    display: block;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 16px 20px;
+    border-radius: 24px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    box-sizing: border-box;
+    max-width: 400px;
+    width: 400px;
+}
+.dialog-close-button {
+    float: right;
+    box-sizing: border-box;
+    margin: 0 !important;
+    color: white;
+    cursor: pointer;
+    font-size: large;
+    background-color: #0071e3;
+    padding: 4px 10px 6px 10px;
+    border-radius: 16px;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    vertical-align: top;
+}
+@media screen and (max-width: 440px) {
+    .dialog {
+        max-width: calc(100dvw - 40px);
+    }
+}
