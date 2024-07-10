@@ -119,3 +119,11 @@ body:before {
     from { background-position: 0 0; }
     to { background-position: 200% 0; }
 }
+@media screen and (max-width: 472px) {
+    .博主 {
+        grid-template: "头像" "标题";
+    }
+    .彩虹字体 {
+        font-size: 2.4em;
+    }
+}
