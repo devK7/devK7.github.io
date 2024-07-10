@@ -37,7 +37,10 @@
             <div class="dialog" id="公告">
                 <h1>本站公告</h1>
                 <p>各位仔细看站长的头像，注意看，站长就是传说中的砖家！！！</p>
-                <a class="dialog-close-button" onclick="document.getElementById('公告').style.display = 'none';">明白了</a>
+                <a href="javascript:void(0);" class="dialog-close-button" onclick="
+                document.getElementById('公告').style.display = 'none';
+                document.querySelector('.page').style.overflow = 'auto';
+                ">明白了</a>
             </div>
         </div>
         <nav class="footer"></nav>
