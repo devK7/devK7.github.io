@@ -36,9 +36,27 @@
             <div class="post-list"></div>
             <div class="dialog" id="公告">
                 <p class="dialog-close-button" onclick="消息提示框.关闭('公告')" tabindex="2">&times;</p>
-                <h1>本站公告</h1>
+                <div class="dialog-title">
+                    <img src="/resource/icon/dialog/公告.ico">
+                    <h1>本站公告</h1>
+                </div>
                 <p>各位仔细看站长的头像，注意看，站长就是传说中的砖家！！！</p>
-                <a href="javascript:void(0);" class="dialog-ok-button" onclick="消息提示框.关闭('公告')" tabindex="1">明白了</a>
+                <div class="dialog-btn-group">
+                    <a href="javascript:void(0);" class="dialog-ok-button" onclick="消息提示框.关闭('公告')" tabindex="1">这下懂了</a>
+                </div>
+            </div>
+            <div class="dialog" id="游戏推荐">
+                <p class="dialog-close-button" onclick="消息提示框.关闭('游戏推荐')" tabindex="2">&times;</p>
+                <div class="dialog-title">
+                    <img src="/resource/icon/advertisement/maxcrush/max_crush/max_crush.png">
+                    <h1>游戏推荐</h1>
+                </div>
+                <p>DFOYO公司的MaxCrush三消挺好玩的，要不一起测试以下？</p>
+                <p>先来<a href="/maxcrush/" style="color:deepskyblue;font-size:x-large;" target="_blank">这里</a>看看吧</p>
+                <div class="dialog-btn-group">
+                    <a href="/maxcrush/" class="dialog-ok-button">试试看</a>
+                    <a href="javascript:void(0);" class="dialog-ok-button" onclick="消息提示框.关闭('游戏推荐');消息提示框.初始化('公告');" tabindex="1">算了</a>
+                </div>
             </div>
         </div>
         <nav class="footer"></nav>

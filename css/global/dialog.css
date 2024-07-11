@@ -17,15 +17,29 @@
     -ms-box-shadow:0 0 0 9999px #0006;
     -o-box-shadow:0 0 0 9999px #0006;
 }
+.dialog-title {
+    display: flex;
+    align-items: center;
+    margin-top: -.5em;
+    gap: 6px;
+}
+.dialog-title img {
+    width: auto;
+    height: 4rem;
+}
 .dialog-close-button {
     float: right;
     cursor: pointer;
 }
-.dialog-ok-button {
+.dialog-btn-group {
     float: right;
     box-sizing: border-box;
     margin: 0 !important;
+}
+.dialog-ok-button {
+    box-sizing: border-box;
     color: white;
+    margin: 0 0 0 8px;
     cursor: pointer;
     font-size: large;
     background-color: #0071e3;
