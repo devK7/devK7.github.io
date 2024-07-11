@@ -9,7 +9,8 @@ window.onload = async function(){
             "/js/global/marked/marked.min.js",
             "/js/global/switch.js",
             "/js/global/Navigation.js",
-            "/js/global/cover.js"
+            "/js/global/cover.js",
+            "/js/global/dialog.js"
         ],
         style: [
             "/css/global/global.css",
@@ -18,8 +19,8 @@ window.onload = async function(){
             "/css/global/switch.css",
             "/css/global/Navigation.css",
             "/css/global/cover.css",
-            "/css/global/rainbow.css",
             "/css/global/post-list.css",
+            "/css/global/dialog.css",
             "https://fonts.googleapis.com/css?family=Noto+Sans+SC:100,300,400,500,700,900"
         ]
     };
