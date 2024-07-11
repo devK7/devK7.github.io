@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript" src="/js/global/JQuery/jquery-3.7.1.min.js"></script>
+        <style>
+            html, body {
+                margin: 0;
+                padding: 0;
+            }
+            .win-container {
+                width: max-content;
+                position: relative;
+                display: grid;
+                grid-template: "a" "b";
+                background-color: rgba(0, 0, 0, 0.2);
+            }
+            .toptitle {
+                width: 100%;
+                display: grid;
+                position: relative;
+                grid-template: "a b";
+                justify-content: start;
+                z-index: 9999;
+                overflow: scroll;
+                resize: vertical;
+            }
+            .w-box {
+                display: grid;
+                grid-template: "a b";
+                justify-content: start;
+            }
+            .winleft {
+                background-color: dodgerblue;
+                float: left;
+                position: relative;
+            }
+            .win {
+                position: relative;
+                top: 0;
+                left: 0;
+                height: 200px;
+                background-color: yellow;
+                z-index: 0;
+                box-sizing: border-box;
+            }
+            .resize-bar-x {
+                width: 1px;
+                height: inherit;
+                resize: horizontal !important;
+                cursor: ew-resize;
+                opacity: 0;
+                overflow: scroll;
+            }
+            .win-title-bar {
+                width: calc(100% + 4px);
+                margin-right: -4px;
+                position: absolute;
+                background-color: deepskyblue;
+                z-index: 999;
+                height: 2rem;
+            }
+            /* 拖拽线 */
+            .resize-line-x {
+                position: absolute;
+                right: 0; top: 0; bottom: 0;
+                border-right: .5px solid #333;
+                border-left: 1.5px solid #666;
+                pointer-events: none;
+            }
+            .resize-bar-x::-webkit-scrollbar {
+                width: 1px;
+                height: inherit;
+            }
+            .resize-save-x {
+                position: absolute;
+                top: 0; right: 5px; bottom: 0; left: 0;
+                overflow-x: hidden;
+            }
+            .win-resize-bar-x {
+                width: 300px;
+                height: inherit;
+                resize: horizontal !important;
+                cursor: ew-resize;
+                cursor: col-resize;
+                opacity: 0;
+                overflow: scroll;
+            }
+            /* 拖拽线 */
+            .win-resize-line-x {
+                position: absolute;
+                right: 0; top: 0; bottom: 0;
+                pointer-events: none;
+                overflow: hidden;
+                z-index: 9999;
+                border-left: 4px deepskyblue solid;
+            }
+            .win-resize-bar-x::-webkit-scrollbar {
+                width: 200px;
+                height: inherit;
+                cursor: ew-resize;
+                cursor: col-resize;
+            }
+            .win-resize-save-x {
+                width: calc(100% - 4px);
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                overflow-x: hidden;
+                border-bottom: 4px deepskyblue solid;
+                border-left: 4px deepskyblue solid;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="win-container">
+            <div class="toptitle"></div>
+            <div class="w-box">
+                <div class="winleft">
+                    <div class="resize-bar-x"></div>
+                    <div class="resize-line-x"></div>
+                    <div class="resize-save-x"></div>
+                </div>
+                <div class="win">
+                    <div class="win-resize-bar-x"></div>
+                    <div class="win-resize-line-x"></div>
+                    <div class="win-resize-save-x">
+                        <div class="win-title-bar"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(async function() {
+                $(".wintop").width($(".win").css("width"));
+                $(".winleft, .resize-bar-x").css("height", $(".win").css("height"));
+            });
+            $(".resize-bar-x").hover(async function(e) {
+                $(".winleft, .resize-bar-x").css("height", $(".win").css("height"));
+            });
+            var _mx, _my = null;
+            $(".win-title-bar").mousemove(async function(e) {
+                const mouseX = e.offsetX;
+                const mouseY = e.offsetY;
+                if (_mx === null && _my === null) {
+                    _mx = mouseX;
+                    _my = mouseY;
+                    return;
+                } else {
+                    const 偏移X = mouseX - _mx;
+                    const 偏移Y = mouseY - _my;
+                    $(".winleft").css("width", ($(".winleft").css("width") + 偏移X));
+                    $(".toptitle").css("height", ($(".toptitle").css("height") + 偏移X));
+                }
+            });
+            /*
+            async function reanmv() {
+                $(".win-title-bar").css("top", $(".resizemove").height());
+                $(".win-title-bar").css("left", $(".resizemove").width());
+                $(".win-title-bar").width($(".win").width());
+            }
+            async function mvanre() {
+                $(".resizemove").height($(".win-title-bar").css("top"));
+                $(".resizemove").width($(".win-title-bar").css("left"));
+            }*/
+        </script>
+    </body>
+</html>
