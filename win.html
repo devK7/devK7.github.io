@@ -19,6 +19,67 @@
                 text-decoration: none;
                 color: black;
             }
+            .taskbar {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                width: 100dvw;
+                height: 48px;
+                background-color: #eeee;
+            }
+            .taskbar .task-apps {
+                position: absolute;
+                text-align: center;
+                left: 50%;
+                transform: translateX(-50%);
+                width: max-content;
+                height: inherit;
+            }
+            .taskbar .task-apps div {
+                display: inline-block;
+                height: 100%;
+                aspect-ratio: 1 / 1;
+                box-sizing: border-box;
+            }
+            .taskbar .task-apps div img {
+                display: inline-block;
+                height: calc(100% - 8px);
+                margin: 4px;
+                padding: 4px;
+                border-radius: 8px;
+                aspect-ratio: 1 / 1;
+                box-sizing: border-box;
+            }
+            .taskbar .task-apps div:hover img {
+                background-color: #fffa;
+            }
+            .taskbar .task-apps div[data-minisize]::after {
+                top: -12px;
+                left: 20px;
+                position: relative;
+                display: block;
+                content: '';
+                height: 4px;
+                width: 8px;
+                margin: 0;
+                padding: 0;
+                background-color: #777;
+                border-radius: 999px;
+            }
+            .taskbar .task-apps div[data-this-is-using]::after {
+                top: -12px;
+                left: 15px;
+                position: relative;
+                display: block;
+                content: '';
+                height: 4px;
+                width: 18px;
+                margin: 0;
+                padding: 0;
+                background-color: deepskyblue;
+                border-radius: 999px;
+            }
             .win {
                 top: 50px;
                 left: 50px;
@@ -134,6 +195,14 @@
         </script>
     </head>
     <body>
+        <div class="taskbar">
+            <div class="task-apps">
+                <div data-minisize><img src="/resource/icon/docs/docs.ico"></div>
+                <div data-this-is-using><img src="/resource/icon/docs/docs.ico"></div>
+                <div data-minisize><img src="/resource/icon/docs/docs.ico"></div>
+                <div><img src="/resource/icon/docs/docs.ico"></div>
+            </div>
+        </div>
         <div id="窗口" class="win">
             <div class="win-title-bar">
                 <div class="win-title">
