@@ -37,26 +37,35 @@
                 height: inherit;
             }
             .taskbar .task-apps div {
-                display: inline-block;
-                height: 100%;
-                aspect-ratio: 1 / 1;
-                box-sizing: border-box;
-            }
-            .taskbar .task-apps div img {
+                top: 0;
+                bottom: 0;
+                position: relative;
                 display: inline-block;
                 height: calc(100% - 8px);
                 margin: 4px;
-                padding: 4px;
+                aspect-ratio: 1 / 1;
+                box-sizing: border-box;
+                transition: all .25s;
                 border-radius: 8px;
+            }
+            .taskbar .task-apps div img, .taskbar .task-apps div svg {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: inline-block;
+                height: 100%;
+                padding: 8px;
                 aspect-ratio: 1 / 1;
                 box-sizing: border-box;
             }
-            .taskbar .task-apps div:hover img {
-                background-color: #fffa;
+            .taskbar .task-apps div:hover {
+                background-color: #fff6;
             }
             .taskbar .task-apps div[data-minisize]::after {
-                top: -12px;
-                left: 20px;
+                bottom: -36px;
+                left: 50%;
+                transform: translateX(-50%);
                 position: relative;
                 display: block;
                 content: '';
@@ -66,10 +75,15 @@
                 padding: 0;
                 background-color: #777;
                 border-radius: 999px;
+                transition: all .5s ease-in-out;
+            }
+            .taskbar .task-apps div[data-this-is-using] {
+                background-color: #fafafaee;
             }
             .taskbar .task-apps div[data-this-is-using]::after {
-                top: -12px;
-                left: 15px;
+                bottom: -36px;
+                left: 50%;
+                transform: translateX(-50%);
                 position: relative;
                 display: block;
                 content: '';
@@ -77,8 +91,9 @@
                 width: 18px;
                 margin: 0;
                 padding: 0;
-                background-color: deepskyblue;
+                background-color: #0078D4;
                 border-radius: 999px;
+                transition: all .5s ease-in-out;
             }
             .win {
                 top: 50px;
@@ -137,12 +152,37 @@
                 margin: 5px 0 0 8px;
                 cursor: context-menu;
             }
+            .taskbar .task-apps div:not(:first-child) {
+                display: none;
+            }
         </style>
         <script>
             $(function() {
                 窗口可以移动();
+                $(".taskbar .task-apps div").on('mousedown', (e) => {
+                    const 原来的高度 = 40;
+                    var _ = 60;
+                    const 偏移X = e.clientX - parseInt($(e.currentTarget.firstElementChild).css("left"));
+                    var 下去的计时器 = setInterval(() => {
+                        $(e.currentTarget.firstChild).css("height", `${原来的高度 / 60 * _}px`);
+                        if (_ > (60 - 12)) --_; else clearInterval(下去的计时器);
+                    }, (1/2));
+                    $(document).mousemove(async function(event) {
+                        $(e.currentTarget).css("left", (event.clientX - 偏移X) + 'px');
+                    });
+                    $(e.currentTarget).on('mouseup', (e) => {
+                        var __ = 60 - 12;
+                        var 上来的计时器 = setInterval(() => {
+                            $(e.currentTarget.firstChild).css("height", `${原来的高度 / 60 * __}px`);
+                            if (__ < 60) ++__; else {
+                                clearInterval(上来的计时器);
+                                $(e.currentTarget).unbind('mouseup');
+                            }
+                        }, (1/2));
+                    });
+                });
             });
-            function 窗口可以移动() {
+            async function 窗口可以移动() {
                 //初始化偏移值
                 var 偏移X = 0;
                 var 偏移Y = 0;
@@ -197,6 +237,10 @@
     <body>
         <div class="taskbar">
             <div class="task-apps">
+                <div data-win-logo>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 4875 4875"><path fill="#0078d4" d="M0 0h2311v2310H0zm2564 0h2311v2310H2564zM0 2564h2311v2311H0zm2564 0h2311v2311H2564"/></svg>
+                </div>
+                <div data-search-bar></div>
                 <div data-minisize><img src="/resource/icon/docs/docs.ico"></div>
                 <div data-this-is-using><img src="/resource/icon/docs/docs.ico"></div>
                 <div data-minisize><img src="/resource/icon/docs/docs.ico"></div>
