@@ -45,7 +45,6 @@
                 margin: 4px;
                 aspect-ratio: 1 / 1;
                 box-sizing: border-box;
-                transition: all .25s;
                 border-radius: 8px;
             }
             .taskbar .task-apps div img, .taskbar .task-apps div svg {
@@ -75,7 +74,6 @@
                 padding: 0;
                 background-color: #777;
                 border-radius: 999px;
-                transition: all .5s ease-in-out;
             }
             .taskbar .task-apps div[data-this-is-using] {
                 background-color: #fafafaee;
@@ -93,7 +91,6 @@
                 padding: 0;
                 background-color: #0078D4;
                 border-radius: 999px;
-                transition: all .5s ease-in-out;
             }
             .win {
                 top: 50px;
@@ -152,9 +149,6 @@
                 margin: 5px 0 0 8px;
                 cursor: context-menu;
             }
-            .taskbar .task-apps div:not(:first-child) {
-                display: none;
-            }
         </style>
         <script>
             $(function() {
@@ -162,21 +156,22 @@
                 $(".taskbar .task-apps div").on('mousedown', (e) => {
                     const 原来的高度 = 40;
                     var _ = 60;
-                    const 偏移X = e.clientX - parseInt($(e.currentTarget.firstElementChild).css("left"));
+                    const 偏移X = e.clientX - parseInt($(e.currentTarget).css("left"));
                     var 下去的计时器 = setInterval(() => {
                         $(e.currentTarget.firstChild).css("height", `${原来的高度 / 60 * _}px`);
                         if (_ > (60 - 12)) --_; else clearInterval(下去的计时器);
                     }, (1/2));
-                    $(document).mousemove(async function(event) {
+                    $(document).on('mousemove', e.currentTarget, async(event) => {
                         $(e.currentTarget).css("left", (event.clientX - 偏移X) + 'px');
                     });
-                    $(e.currentTarget).on('mouseup', (e) => {
+                    $(e.currentTarget).on('mouseup', (event) => {
+                        $(event.currentTarget).unbind('mousemove');
                         var __ = 60 - 12;
                         var 上来的计时器 = setInterval(() => {
-                            $(e.currentTarget.firstChild).css("height", `${原来的高度 / 60 * __}px`);
-                            if (__ < 60) ++__; else {
+                            $(event.currentTarget.firstChild).css("height", `${原来的高度 / 60 * __}px`);
+                            if (__ <= 60) ++__; else {
                                 clearInterval(上来的计时器);
-                                $(e.currentTarget).unbind('mouseup');
+                                $(event.currentTarget).unbind('mouseup');
                             }
                         }, (1/2));
                     });
@@ -232,6 +227,7 @@
                 }
                 已经最大化了 = !已经最大化了
             }
+            function 最小化(window_target, taskbar_target) {}
         </script>
     </head>
     <body>
